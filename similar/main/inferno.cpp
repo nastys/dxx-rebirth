@@ -625,6 +625,8 @@ static int main(int argc, char *argv[])
 #if defined(DXX_BUILD_DESCENT_II)
 	con_puts(CON_DEBUG, "Initializing movie libraries...");
 	auto &&loaded_builtin_movies = init_movies();		//init movie libraries
+    auto dummy = &loaded_builtin_movies;
+    dummy = 0;
 #endif
 
 	show_titles();
